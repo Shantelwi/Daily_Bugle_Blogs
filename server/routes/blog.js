@@ -61,27 +61,4 @@ BlogRouter.get("/:id", getAuth, async (req, res) => {
         .catch(err => response(res, 400, { error: err }))
 })
 
-// BlogRouter.get('/comments', (req, res) => {
-//     Blog.find().toArray()
-//         .then((comments) => {
-//             res.json(comments);
-//         })
-//         .catch((error) => {
-//             console.error('Error fetching comments:', error);
-//             res.status(500).json({ error: 'Failed to fetch comments' });
-//         });
-// });
-
-// BlogRouter.post('/comments', (req, res) => {
-//     const { comment } = req.body;
-//     Blog.insertOne({ comment })
-//         .then(() => {
-//             res.status(201).json({ message: 'Comment submitted successfully' });
-//         })
-//         .catch((error) => {
-//             console.error('Error submitting comment:', error);
-//             res.status(500).json({ error: 'Failed to submit comment' });
-//         });
-// });
-
 export default BlogRouter;
